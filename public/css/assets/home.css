@@ -1,0 +1,379 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/*INICIO DO CSS NAVBAR*/
+nav {
+    background: #cf9fa6;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+img.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    /* background: #cf9fa6; */
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    img.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #b76e79;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        /* color: #cf9fa6; */
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+section {
+    background: url(../../img/home/bj.jpg) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+@media (max-width: 680px) {
+    section {
+        background: url(../../img/home/mobileHome.jpg) no-repeat;
+        background-size: cover;
+        width: 100vw;
+        z-index: 1;
+        height: 100vh;
+
+        object-fit: cover;
+    }
+}
+
+/*FIM DO CSS NAVBAR*/
+
+/*INICIO DO CSS CARD*/
+@media (max-width: 780px) {
+    .cards {
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 280px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.cards {
+    width: 100vw;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    margin-bottom: 30px;
+}
+
+.container {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeloIMG {
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+}
+
+.details {
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details > h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details > p {
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.formRoute {
+    text-align: center;
+    width: 180px;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+button,
+.btnDate {
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid white;
+    padding: 14px 10px;
+    width: 180px;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.2);
+    border: 2px solid #b76e79;
+    color: #b76e79;
+}
+
+/*FIM DO CSS CARD*/
+
+/*INICIO CSS FOOTER*/
+footer {
+    background-color: #111;
+    height: auto;
+    width: 100vw;
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    footer {
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i {
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*FIM CSS FOOTER*/
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: #000;
+}
+
+.swiper-container h2 {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+
+    word-break: break-all;
+}
+
+.swiper-container .btnInscricao {
+    width: 500px;
+    font-size: 20px;
+
+    margin-top: 50px;
+    background-color: #ff4584;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 680px) {
+    .swiper-container h2 {
+        padding: 14px;
+        margin-bottom: 20px;
+    }
+    .swiper-container .btnInscricao {
+        width: 200px;
+        margin-top: 20px;
+    }
+}
